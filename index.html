@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Schuster</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3YTND5PYY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-N3YTND5PYY');
+    </script>
+
+    <style>
+        :root {
+            --primary: #1e88e5;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            --font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            height: 100vh;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), var(--primary), rgba(255, 255, 255, 0));
+        }
+
+        header {
+            padding: 0 !important;
+        }
+
+        footer {
+            padding: 0 !important;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .gradient-text {
+            background: -webkit-linear-gradient(225deg, var(--mark-background-color), var(--primary));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px var(--background-color);
+        }
+
+        .projects {
+            margin-top: 2rem;
+        }
+
+        .project {
+            padding: 1rem;
+            border: 1px solid var(--primary);
+            border-radius: 0.75rem;
+            width: 50%;
+            margin-bottom: 0.50rem;
+        }
+
+        .business {
+            margin-top: 2rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .project {
+                width: 100%;
+            }
+
+            .project a {
+                width: 100%;
+            }
+
+            .social-buttons {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .social-buttons a {
+                margin-bottom: 0.50rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Marco Schuster</h1>
+        </div>
+    </header>
+    <hr>
+    <main>
+        <div class="container">
+            <h3>Frontend <span class="gradient-text">Developer</span> and <span class="gradient-text">Open Source</span> enthusiast</h3>
+            <div class="projects">
+                <div class="project">
+                    <h5 class="gradient-text">Ghost Chat</h5>
+                    <p>A standalone, multiplatform Twitch.tv chat as overlay on windowed/windowed fullscreen applications.</p>
+                    <a role="button" class="secondary outline" href="https://github.com/Enubia/ghost-chat" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project">
+                    <h5 class="gradient-text">Donate Gifts</h5>
+                    <p>This web app enables the users to send holiday gifts and school supplies to the children in foster care and emergency shelters.</p>
+                    <a role="button" class="secondary outline" href="https://github.com/donategifts/donategifts" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <p class="business">For business inquiries, please contact me via <a href="mailto:dev.enubia@mailbox.org" class="gradient-text">dev.enubia[at]mailbox.org</a>.</p>
+            <div class="social-buttons">
+                <a role="button" class="outline" href="https://github.com/enubia" target="_blank">GitHub</a>
+                <a role="button" class="outline" href="https://www.linkedin.com/in/marco-schuster-37b70a140/" target="_blank">LinkedIn</a>
+                <a role="button" class="outline" href="https://twitter.com/Enubia5" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <small>&copy; <span id="year"></span> Marco Schuster</small>
+        </div>
+    </footer>
+
+    <script>
+        const year = new Date().getFullYear();
+        document.getElementById('year').innerHTML = year;
+    </script>
+</body>
+</html>
